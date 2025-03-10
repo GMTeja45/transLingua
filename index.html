@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Speech Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Multilingual Speech Translator</h1>
+            <p>Speak in one language, translate to another </p>
+        </header>
+        
+        <div class="status" id="statusMessage">Ready to translate</div>
+        
+        <div class="language-selectors">
+            <div class="language-selector">
+                <label for="sourceLanguage">Source Language:</label>
+                <select id="sourceLanguage"></select>
+            </div>
+            
+            <button class="swap-button" id="swapLanguages">
+                <span class="material-icons">swap_horiz</span>
+            </button>
+            
+            <div class="language-selector">
+                <label for="targetLanguage">Target Language:</label>
+                <select id="targetLanguage"></select>
+            </div>
+        </div>
+        
+        <div class="text-areas">
+            <div class="text-area">
+                <label>Source Text:</label>
+                <textarea id="sourceText" placeholder="Your recognized speech will appear here..."></textarea>
+                <div class="controls">
+                    <button id="recordButton">
+                        <span class="material-icons">mic</span> Start Recording
+                    </button>
+                    <button id="clearSourceButton">
+                        <span class="material-icons">clear</span> Clear
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-area">
+                <label>Translated Text:</label>
+                <textarea id="translatedText" placeholder="Translation will appear here..." readonly></textarea>
+                <div class="controls">
+                    <button id="translateButton">
+                        <span class="material-icons">translate</span> Translate
+                    </button>
+                    <button id="copyButton">
+                        <span class="material-icons">content_copy</span> Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="recent-translations">
+            <h2>Recent Translations</h2>
+            <div class="history-list" id="historyList"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
