@@ -1,5 +1,0 @@
-Flask
-openai
-gunicorn
-deep-translator
-gtts
