@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Speech Translator</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script defer src="static/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Multilingual Speech Translator</h1>
+        <p class="subtitle">Speak in one language, translate to another - supports 50+ languages worldwide</p>
+        <p class="status">Ready to translate</p>
+
+        <div class="language-section">
+            <div class="language-select">
+                <label for="sourceLang"><strong>Source Language:</strong></label>
+                <select id="sourceLang"></select>
+            </div>
+            <button id="swapLanguages" class="swap-btn">⇆</button>
+            <div class="language-select">
+                <label for="targetLang"><strong>Target Language:</strong></label>
+                <select id="targetLang"></select>
+            </div>
+        </div>
+
+        <div class="text-area">
+            <textarea id="inputText" placeholder="Your recognized speech will appear here..."></textarea>
+            <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
+        </div>
+
+        <div class="controls">
+            <button id="startRecording" class="btn primary"><i class="mic-icon"></i> Start Recording</button>
+            <button id="clearText" class="btn secondary">❌ Clear</button>
+            <button id="translateBtn" class="btn primary"><i class="translate-icon"></i> Translate</button>
+            <button id="copyText" class="btn secondary"><i class="copy-icon"></i> Copy</button>
+        </div>
+
+        <h2 class="recent-title">Recent Translations</h2>
+        <input type="text" id="recentTranslations" readonly>
+    </div>
+</body>
+</html>
